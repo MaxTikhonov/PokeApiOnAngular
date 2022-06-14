@@ -19,6 +19,7 @@ li {
    "f f f";
 }
 .header {
+   background: #44a5c8;
    max-width: 1200px;
    grid-area: h;
 }
@@ -26,6 +27,8 @@ li {
    text-align: center;
 }
 .main {
+   min-height: 70px;
+   background: #69c844;
    grid-area: m;
 }
 .main-flex {
@@ -35,15 +38,29 @@ li {
 }
 .main-flex-li {
    padding: 5px;
+   position: relative;
 }
-.main-flex-li:hover {
-   border-bottom: 2px solid blue;
+.main-flex-li:before {
+   content: "";
+   bottom: 0;
+   left: 0;
+   height: 2px;
+   position: absolute;
    transition: all ease 0.1s;
+   background: rgb(34, 80, 208);
+}
+.main-flex-li:hover:before {
+   width: 100%;
 }
 .sidebar {
+   background: #c844b2;
    grid-area: s;
 }
+.sidebar-text {
+   text-align: center;
+}
 .footer {
+   background: #da6871;
    grid-area: f; 
 }
 .footer-text {
