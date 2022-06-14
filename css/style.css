@@ -2,9 +2,13 @@
 *:before,
 *:after {
  box-sizing: border-box;
+ font-size: 24px;
 }
 a {
    text-decoration: none;
+}
+ul {
+   padding: 0px 10px;
 }
 li {
    list-style: none;
@@ -33,7 +37,6 @@ li {
 }
 .main-flex {
    display: flex;
-   justify-content: space-between;
    flex-wrap: wrap;
 }
 .main-flex-li {
