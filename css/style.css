@@ -72,9 +72,22 @@ li {
 .popup {
    height: 100vh;
    width: 100vw;
-   background: #333;
-   position: absolute;
+   background: rgba(0, 0, 0, 0.4);
+   position: fixed;
    top: 0;
    left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    display: none;
+}
+.active {
+   display: flex;
+}
+.popup-content {
+   padding: 20px;
+   border-radius: 12px;
+   background: #fff;
+   height: 300px;
+   width: 400px;
 }
