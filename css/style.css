@@ -3,6 +3,9 @@
 *:after {
  box-sizing: border-box;
 }
+a {
+   text-decoration: none;
+}
 li {
    list-style: none;
 }
@@ -32,4 +35,17 @@ li {
 }
 .main-flex-li {
    padding: 5px;
+}
+.main-flex-li:hover {
+   border-bottom: 2px solid blue;
+   transition: all ease 0.1s;
+}
+.sidebar {
+   grid-area: s;
+}
+.footer {
+   grid-area: f; 
+}
+.footer-text {
+   text-align: center;
 }
