@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+li {
+   list-style: none;
+}
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-areas: 
+   "h h h"
+   "m m s"
+   "f f f";
+}
+.header {
+   max-width: 1200px;
+   grid-area: h;
+}
+.header-text {
+   text-align: center;
+}
+.main {
+   grid-area: m;
+}
+.main-flex {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.main-flex-li {
+   padding: 5px;
+}
