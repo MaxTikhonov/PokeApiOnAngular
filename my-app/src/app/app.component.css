@@ -31,7 +31,7 @@ li {
    text-align: center;
 }
 .main {
-   min-height: 70px;
+   min-height: 3rem;
    background: #69c844;
    grid-area: m;
 }
@@ -68,7 +68,4 @@ li {
 }
 .footer-text {
    text-align: center;
-}
-.active {
-   display: flex;
 }
