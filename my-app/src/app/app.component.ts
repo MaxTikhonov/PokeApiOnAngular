@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  toggle = false;
+  modal = false
+  toggle = false
   toggleCards() {
     this.toggle = !this.toggle
   }
