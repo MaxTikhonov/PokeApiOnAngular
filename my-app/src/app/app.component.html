@@ -4,22 +4,22 @@
    </header>
    <div class="main">
          <ul class="main-flex">
-            <li class="main-flex-li"><a href="#">cheri</a></li>
-            <li class="main-flex-li"><a href="#">chesto</a></li>
-            <li class="main-flex-li"><a href="#">pecha</a></li>
-            <li class="main-flex-li"><a href="#">rawst</a></li>
-            <li class="main-flex-li"><a href="#">aspear</a></li>
-            <li class="main-flex-li"><a href="#">leppa</a></li>
-            <li class="main-flex-li"><a href="#">oran</a></li>
-            <li class="main-flex-li"><a href="#">persim</a></li>
-            <li class="main-flex-li"><a href="#">lum</a></li>
-            <li class="main-flex-li"><a href="#">sitrus</a></li>
-            <li class="main-flex-li"><a href="#">figy</a></li>
-            <li class="main-flex-li"><a href="#">wiki</a></li>
-            <li class="main-flex-li"><a href="#">mago</a></li>
-            <li class="main-flex-li"><a href="#">aguav</a></li>
-            <li class="main-flex-li"><a href="#">iapapa</a></li>
-            <li class="main-flex-li"><a href="#">razz</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">cheri</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">chesto</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">pecha</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">rawst</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">aspear</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">leppa</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">oran</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">persim</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">lum</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">sitrus</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">figy</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">wiki</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">mago</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">aguav</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">iapapa</a></li>
+            <li class="main-flex-li" (click)="toggleCards()"><a href="#">razz</a></li>
          </ul>
    </div>
    <div class="sidebar">
@@ -29,5 +29,7 @@
       <div class="footer-text">Это футер</div>
    </div>
 </div>
-<app-card></app-card>
+<div *ngIf="toggle">
+  <app-card></app-card>
+</div>
 <router-outlet></router-outlet>
