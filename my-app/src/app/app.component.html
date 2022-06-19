@@ -2,19 +2,22 @@
    <header class="header">
     <div class="header-flex">
       <img src="{{headerImg}}" alt="pokeapi" class="header-img">
-      <div class="header-text">
-        <p>Choose fruit:</p>
-        <form action="#">
-          <label for="/"></label>
-          <input type="text">
-          <input type="submit" value="Submit">
+      <div class="header-wrap">
+        <p class="header-text">Choose fruit:</p>
+        <form action="#" class="header-form">
+          <label for="/" class="header-label">
+          <input type="text" class="header-input">
+          <button class="header-button">
+            <span>Submit</span>
+          </button>
+        </label>
         </form>
       </div>
     </div>
    </header>
    <div class="main">
          <ul class="main-flex">
-          <li *ngFor="let item of items" class="main-flex-li" (click)="search($event)" ><a href="#">{{item}}</a></li>
+          <!-- <li *ngFor="let item of items" class="main-flex-li" (click)="search($event)" ><a href="#">{{item}}</a></li> -->
          </ul>
    </div>
    <div class="sidebar">
