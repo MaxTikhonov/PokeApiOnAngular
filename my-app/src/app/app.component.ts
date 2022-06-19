@@ -9,6 +9,7 @@ import { getLocaleDayNames } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  headerImg: string  = '../assets/pokeapi.png'
   items: string[] = []
   modal = false
   userName: string = ''

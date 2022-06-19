@@ -17,7 +17,7 @@ li {
    max-width: 1200px;
    margin: 0 auto;
    display: grid;
-   grid-template-areas: 
+   grid-template-areas:
    "h h h"
    "m m s"
    "f f f";
@@ -29,6 +29,18 @@ li {
 }
 .header-text {
    text-align: center;
+   display: flex;
+   align-items: center;
+}
+.header-img {
+  width: 100%;
+  height: auto;
+}
+.header-flex {
+  padding: 10px;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-around;
 }
 .main {
    min-height: 3rem;
@@ -64,8 +76,11 @@ li {
 }
 .footer {
    background: #da6871;
-   grid-area: f; 
+   grid-area: f;
 }
 .footer-text {
    text-align: center;
+}
+@media(max-width:800px) {
+
 }
