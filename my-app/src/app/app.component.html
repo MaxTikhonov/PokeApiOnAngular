@@ -4,7 +4,7 @@
    </header>
    <div class="main">
          <ul class="main-flex">
-            <li class="main-flex-li" (click)="modal = true"><a href="#">cheri</a></li>
+            <li class="main-flex-li" (click)="modal = true"><a href="#" [username]="nameOfFruit" #a1 (click)="selectInput(a1.username)">cheri</a></li>
             <li class="main-flex-li" (click)="modal = true"><a href="#">chesto</a></li>
             <li class="main-flex-li" (click)="modal = true"><a href="#">pecha</a></li>
             <li class="main-flex-li" (click)="modal = true"><a href="#">rawst</a></li>
@@ -27,12 +27,21 @@
    </div>
    <div class="footer">
       <div class="footer-text">Это футер</div>
+      User name <input type="text" [(ngModel)]="userName">
+      <button (click)="search()">Search</button>
+      <input type="text" #newSelectInput (input)="selectInput(newSelectInput.value)">
    </div>
 </div>
+<p *ngFor="let item of items" >{{item}}</p>
 <app-new-component
 *ngIf="modal"
 (close)="modal=false"
-title="Modal Window"
+[nameOfFruit]="nameOfFruit"
+[id]="id"
+[growthTime]="growthTime"
+[maxHarvest]="maxHarvest"
+[sizeOfFruit]="sizeOfFruit"
+[smoothness]="smoothness"
 ></app-new-component>
 <div *ngIf="toggle">
   <!-- <app-card></app-card> -->

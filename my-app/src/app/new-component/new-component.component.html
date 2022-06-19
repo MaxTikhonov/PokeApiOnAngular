@@ -3,6 +3,15 @@
   <nav class="navbar">
     <h1>{{ title }}</h1>
   </nav>
+  <div>
+    {{nameOfFruit}}
+    <h2>Name: {{nameOfFruit}}</h2>
+    <div>Growth time: {{growthTime}}</div>
+    <div>ID: {{id}}</div>
+    <div>Max harvest: {{maxHarvest}}</div>
+    <div>Size: {{sizeOfFruit}}</div>
+    <div>Smoothness: {{smoothness}}</div>
+  </div>
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, voluptas.</p>
   <button class="btn" (click)="close.emit()">Close</button>
 </div>

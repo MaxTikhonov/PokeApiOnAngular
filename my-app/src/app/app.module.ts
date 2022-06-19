@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import {CardComponent} from './card/card.component';
+import {NewServiceService} from './new-service.service';
 import { NewComponentComponent } from './new-component/new-component.component';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +19,10 @@ import { NewComponentComponent } from './new-component/new-component.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [NewServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
