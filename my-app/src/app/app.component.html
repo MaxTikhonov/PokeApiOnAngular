@@ -4,22 +4,7 @@
    </header>
    <div class="main">
          <ul class="main-flex">
-            <li class="main-flex-li" (click)="modal = true"><a href="#" [username]="nameOfFruit" #a1 (click)="selectInput(a1.username)">cheri</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">chesto</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">pecha</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">rawst</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">aspear</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">leppa</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">oran</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">persim</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">lum</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">sitrus</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">figy</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">wiki</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">mago</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">aguav</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">iapapa</a></li>
-            <li class="main-flex-li" (click)="modal = true"><a href="#">razz</a></li>
+          <li *ngFor="let item of items" class="main-flex-li" (click)="search()" ><a href="#">{{item}}</a></li>
          </ul>
    </div>
    <div class="sidebar">
@@ -32,7 +17,6 @@
       <input type="text" #newSelectInput (input)="selectInput(newSelectInput.value)">
    </div>
 </div>
-<p *ngFor="let item of items" >{{item}}</p>
 <app-new-component
 *ngIf="modal"
 (close)="modal=false"
