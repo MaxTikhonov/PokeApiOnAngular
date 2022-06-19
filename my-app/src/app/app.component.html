@@ -4,7 +4,7 @@
    </header>
    <div class="main">
          <ul class="main-flex">
-          <li *ngFor="let item of items" class="main-flex-li" (click)="search()" ><a href="#">{{item}}</a></li>
+          <li *ngFor="let item of items" class="main-flex-li" (click)="search($event)" ><a href="#">{{item}}</a></li>
          </ul>
    </div>
    <div class="sidebar">
@@ -13,7 +13,6 @@
    <div class="footer">
       <div class="footer-text">Это футер</div>
       User name <input type="text" [(ngModel)]="userName">
-      <button (click)="search()">Search</button>
       <input type="text" #newSelectInput (input)="selectInput(newSelectInput.value)">
    </div>
 </div>

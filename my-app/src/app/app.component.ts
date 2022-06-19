@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   sizeOfFruit = ''
   smoothness = ''
   getNames() {
-    this.http.get('https://pokeapi.co/api/v2/berry/?offset=0&limit=16')
+    this.http.get('https://pokeapi.co/api/v2/berry/?offset=0&limit=64')
     .subscribe((resp) => {
       this.mainResponse = resp
       this.results = this.mainResponse.results
@@ -44,9 +44,10 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {
 
   }
-  search() {
+  search(event: any) {
+    console.log(event)
     this.modal = true;
-    this.http.get('https://pokeapi.co/api/v2/berry/' + this.userName)
+    this.http.get('https://pokeapi.co/api/v2/berry/' + event.path[0].textContent)
     .subscribe((response) => {
       this.response = response;
       console.log(this.response);
