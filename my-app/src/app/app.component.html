@@ -11,9 +11,6 @@
       <div class="sidebar-text">Привет</div>
    </div>
    <div class="footer">
-      <div class="footer-text">Это футер</div>
-      User name <input type="text" [(ngModel)]="userName">
-      <input type="text" #newSelectInput (input)="selectInput(newSelectInput.value)">
    </div>
 </div>
 <app-new-component
@@ -26,7 +23,4 @@
 [sizeOfFruit]="sizeOfFruit"
 [smoothness]="smoothness"
 ></app-new-component>
-<div *ngIf="toggle">
-  <!-- <app-card></app-card> -->
-</div>
 <router-outlet></router-outlet>

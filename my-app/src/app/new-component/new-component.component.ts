@@ -17,9 +17,7 @@ export class NewComponentComponent implements OnInit {
   @Input() title = ''
   @Output() close = new EventEmitter<void>()
   constructor() {
-
   }
   ngOnInit(): void {
-
   }
 }

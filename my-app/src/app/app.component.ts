@@ -11,8 +11,6 @@ import { getLocaleDayNames } from '@angular/common';
 export class AppComponent implements OnInit {
   items: string[] = []
   modal = false
-  toggle = false
-  inputName = ''
   userName: string = ''
   mainResponse: any
   results: any
@@ -28,25 +26,19 @@ export class AppComponent implements OnInit {
     .subscribe((resp) => {
       this.mainResponse = resp
       this.results = this.mainResponse.results
-      console.log(this.results)
       for(let key of this.results) {
         this.items.push(key.name)
       }
-      console.log(this.items)
     })
   }
   ngOnInit(): void {
     this.getNames()
-  }
-  toggleCards() {
-    this.toggle = !this.toggle
   }
   constructor(private http: HttpClient) {
 
   }
   search(event: any) {
     console.log(event)
-    this.modal = true;
     this.http.get('https://pokeapi.co/api/v2/berry/' + event.path[0].textContent)
     .subscribe((response) => {
       this.response = response;
@@ -57,9 +49,7 @@ export class AppComponent implements OnInit {
       this.maxHarvest = this.response.max_harvest;
       this.sizeOfFruit = this.response.size;
       this.smoothness = this.response.smoothness;
+      this.modal = true;
     })
-  }
-  selectInput(value: string) {
-    this.nameOfFruit = value;
   }
 }
