@@ -23,6 +23,5 @@ export class CardComponent implements OnInit {
   toCart() {
     this.choosedFruit=this.nameOfFruit
     this.outFruitName.emit(this.choosedFruit)
-    console.log(this.choosedFruit)
   }
 }
