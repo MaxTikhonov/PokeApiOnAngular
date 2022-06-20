@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {NewServiceService} from './new-service.service';
 import {HttpClient} from '@angular/common/http';
 import { getLocaleDayNames } from '@angular/common';
@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   maxHarvest = ''
   sizeOfFruit = ''
   smoothness = ''
+  @Input() choosedFruit = ''
   getNames() {
     this.http.get('https://pokeapi.co/api/v2/berry/?offset=0&limit=64')
     .subscribe((resp) => {
@@ -39,11 +40,9 @@ export class AppComponent implements OnInit {
 
   }
   search(event: any) {
-    console.log(event)
     this.http.get('https://pokeapi.co/api/v2/berry/' + event.path[0].textContent)
     .subscribe((response) => {
       this.response = response;
-      console.log(this.response);
       this.nameOfFruit = this.response.name;
       this.id = this.response.id;
       this.growthTime = this.response.growth_time;
@@ -52,5 +51,8 @@ export class AppComponent implements OnInit {
       this.smoothness = this.response.smoothness;
       this.modal = true;
     })
+  }
+  addName(name:string) {
+    this.choosedFruit = name
   }
 }

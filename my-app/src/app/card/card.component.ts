@@ -7,16 +7,22 @@ import { subscribeOn } from 'rxjs';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+  choosedFruit: string = ''
   @Input() nameOfFruit = ''
   @Input() id = ''
   @Input() growthTime = ''
   @Input() maxHarvest = ''
   @Input() sizeOfFruit = ''
   @Input() smoothness = ''
-  @Input() title = ''
+  @Output() outFruitName = new EventEmitter<string>()
   @Output() close = new EventEmitter<void>()
   constructor() {
   }
   ngOnInit(): void {
+  }
+  toCart() {
+    this.choosedFruit=this.nameOfFruit
+    this.outFruitName.emit(this.choosedFruit)
+    console.log(this.choosedFruit)
   }
 }

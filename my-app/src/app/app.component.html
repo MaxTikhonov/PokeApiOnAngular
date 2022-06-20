@@ -6,7 +6,7 @@
         <p class="header-text">Choose fruit:</p>
         <form action="#" class="header-form">
           <label for="/" class="header-label">
-          <input type="text" class="header-input">
+          <input type="text" class="header-input" [(ngModel)]="this.choosedFruit" [ngModelOptions]="{standalone: true}">
           <button class="header-button">
             <span>Submit</span>
           </button>
@@ -35,5 +35,6 @@
 [maxHarvest]="maxHarvest"
 [sizeOfFruit]="sizeOfFruit"
 [smoothness]="smoothness"
+(outFruitName)="addName($event)"
 ></app-card>
 <router-outlet></router-outlet>
