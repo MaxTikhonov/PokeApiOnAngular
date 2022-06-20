@@ -17,7 +17,7 @@
    </header>
    <div class="main">
          <ul class="main-flex">
-          <!-- <li *ngFor="let item of items" class="main-flex-li" (click)="search($event)" ><a href="#">{{item}}</a></li> -->
+          <li *ngFor="let item of items" class="main-flex-li" (click)="search($event)" ><a href="#">{{item}}</a></li>
          </ul>
    </div>
    <div class="sidebar">
@@ -26,7 +26,7 @@
    <div class="footer">
    </div>
 </div>
-<app-new-component
+<app-card
 *ngIf="modal"
 (close)="modal=false"
 [nameOfFruit]="nameOfFruit"
@@ -35,5 +35,5 @@
 [maxHarvest]="maxHarvest"
 [sizeOfFruit]="sizeOfFruit"
 [smoothness]="smoothness"
-></app-new-component>
+></app-card>
 <router-outlet></router-outlet>
