@@ -8,12 +8,52 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   display: flex;
 }
 .modal {
   padding: .8rem;
+  color: rgb(1, 45, 165);
    border-radius: 12px;
-   background: #fff;
-   height: 20rem;
+   background:burlywood;
+   height: 19rem;
    width: 24rem;
+   border: rgb(34, 80, 208) 4px solid;
+   font-style: italic;
+   font-weight: 600;
+   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+.modal span {
+  color: rgb(230, 245, 11);
+}
+.btn {
+  text-decoration: none;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  color: rgb(1, 45, 165);
+  margin: 20px 5px 0px 0px;
+  border: rgb(34, 80, 208) 4px solid;
+  border-radius: 8px;
+  text-shadow: 1px 1px 2px red, 0 0 1em rgb(197, 197, 241), 0 0 0.2em rgb(35, 181, 35);
+  background:rgb(186, 191, 206);
+  cursor: pointer;
+}
+.btn:hover {
+  transition: .5s ease all;
+  border: rgb(230, 245, 11) 4px solid;
+  color: rgb(230, 245, 11);
+}
+.cardmain {
+  display: flex;
+  flex-direction: column;
+}
+@media(max-width: 550px) {
+  .modal {
+    width: 18rem;
+    height: 17rem;
+  }
+}
+@media(max-width: 400px) {
+  .modal {
+    width: 14rem;
+  }
 }

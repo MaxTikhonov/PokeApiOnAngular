@@ -1,14 +1,12 @@
 <div class="backdrop">
 <div class="modal">
-  <nav class="navbar">
-    <h2>{{nameOfFruit}}</h2>
-  </nav>
-  <div>
-    <div>Growth time: {{growthTime}}</div>
-    <div>ID: {{id}}</div>
-    <div>Max harvest: {{maxHarvest}}</div>
-    <div>Size: {{sizeOfFruit}}</div>
-    <div>Smoothness: {{smoothness}}</div>
+    <h2>Name: <span>{{nameOfFruit}}</span></h2>
+  <div class="cardmain">
+    <div>Growth time: <span>{{growthTime}}</span></div>
+    <div>ID: <span>{{id}}</span></div>
+    <div>Max harvest: <span>{{maxHarvest}}</span></div>
+    <div>Size: <span>{{sizeOfFruit}}</span></div>
+    <div>Smoothness: <span>{{smoothness}}</span></div>
   </div>
   <button class="btn" (click)="toCart()">To cart</button>
   <button class="btn" (click)="close.emit()">Close</button>

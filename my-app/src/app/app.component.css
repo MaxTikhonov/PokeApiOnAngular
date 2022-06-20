@@ -26,6 +26,7 @@ li {
    background: #44a5c8;
    max-width: 1200px;
    grid-area: h;
+   border: #333 solid 3px;
 }
 .header-wrap {
    padding-left: 20px;
@@ -93,12 +94,8 @@ li {
 .header-button:hover {
   background-color: #c213c8;
   }
-.header-button:hover span {
-  padding-right: 10px;
-  }
 .header-button:hover span:after {
   opacity: 1;
-  right: 0;
   }
   .header-text {
     color: #4d01b7;
@@ -109,30 +106,37 @@ li {
 .main {
    background: #69c844;
    grid-area: m;
+   border: #333 solid 3px;
+   text-shadow: 1px 1px 2px rgb(238, 69, 69), 0 0 1em rgb(34, 255, 0), 0 0 0.2em rgb(104, 104, 233);
 }
 .main-flex {
    display: flex;
    flex-wrap: wrap;
+   justify-content: space-between;
 }
 .main-flex-li {
-   padding: 5px;
+   padding: 6px;
    position: relative;
+   border-radius: 10px;
+   border: rgb(34, 80, 208) 2px solid;
+   margin: 2px;
 }
 .main-flex-li:before {
    content: "";
    bottom: 0;
-   left: 0;
-   height: 2px;
+   left: 2%;
+   height: 4px;
    position: absolute;
    transition: all ease 0.1s;
    background: rgb(34, 80, 208);
 }
 .main-flex-li:hover:before {
-   width: 100%;
+   width: 95%;
 }
 .sidebar {
    background: #c844b2;
    grid-area: s;
+   border: #333 solid 3px;
 }
 .sidebar-p {
   padding: 0 60px;
@@ -185,6 +189,9 @@ li {
   *:after {
     font-size: 20px;
 }
+.sidebar-p {
+  padding: 0 40px;
+}
 }
 @media(max-width:440px) {
   .header-flex {
@@ -194,5 +201,8 @@ li {
     max-height: 120px;
     max-width: 260px;
     margin-left: 0px;
+  }
+  .sidebar-p {
+    padding: 0 30px;
   }
 }
