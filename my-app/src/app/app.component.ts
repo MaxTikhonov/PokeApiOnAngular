@@ -9,7 +9,7 @@ import { getLocaleDayNames } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  headerImg: string  = '../assets/pokeapi.png'
+  headerImg: string  = 'https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png'
   items: string[] = []
   modal = false
   userName: string = ''
